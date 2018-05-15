@@ -28,89 +28,176 @@ def age_extraction(words):
 	for i in range (0,size):
 		try:
 			age_temp=float(words[i])
-			if words[i+1]=='year' and (words[i+2]!='and' or words[i+3]!='month'):
-				age=age_temp
-				break
-			elif words[i+1]=='month':
-				age=age_temp/12
-				break
-			elif words[i+1]=='year' and words[i+2]=='and' and words[i+4]=='month':
-				try:
-					month_temp=float(words[i+3])
-					age = age + month_temp/12
+			if i+4 < size:
+				if words[i+1]=='year' and (words[i+2]!='and' or words[i+3]!='month'):
+					age=age_temp
 					break
-				except ValueError:
-					month_temp=text2int(words[i+3])
-					age = age + month_temp/12
+				elif words[i+1]=='month':
+					age=age_temp/12
 					break
-			elif words[i+1]=='year' and words[i+2]!='and' and words[i+3]=='month':
-				try :
-					month_temp=float(words[i+3])
-					age = age + month_temp/12
+				elif words[i+1]=='year' and words[i+2]=='and' and words[i+4]=='month':
+					try:
+						month_temp=float(words[i+3])
+						age = age + month_temp/12
+						break
+					except ValueError:
+						month_temp=text2int(words[i+3])
+						age = age + month_temp/12
+						break
+				elif words[i+1]=='year' and words[i+2]!='and' and words[i+3]=='month':
+					try :
+						month_temp=float(words[i+3])
+						age = age + month_temp/12
+						break
+					except ValueError:
+						month_temp=text2int(words[i+2])
+						age= age + month_temp/12
+						break
+				else:
+					continue
+			elif i+3 < size :
+				if words[i+1]=='year' and (words[i+2]!='and' or words[i+3]!='month'):
+					age=age_temp
 					break
-				except ValueError:
-					month_temp=text2int(words[i+2])
-					age= age + month_temp/12
+				elif words[i+1]=='month':
+					age=age_temp/12
 					break
-			else:
-				continue
+				elif words[i+1]=='year' and words[i+2]!='and' and words[i+3]=='month':
+					try :
+						month_temp=float(words[i+3])
+						age = age + month_temp/12
+						break
+					except ValueError:
+						month_temp=text2int(words[i+2])
+						age= age + month_temp/12
+						break
+				else:
+					continue
+			elif i+1 < size :
+				if words[i+1]=='year':
+					age=age_temp
+					break
+				elif words[i+1]=='month':
+					age=age_temp/12
+					break
+				else:
+					continue
+
 		except :
 			try:
 				age_temp=text2int(words[i])
 				try:
 					age_temp1=text2int(words[i+1])
-					if words[i+2]=='year' and (words[i+3]!='and' or words[i+3]!='month'):
-						age=age_temp + age_temp1
-						break
-					elif words[i+1]=='month':
-						age=(age_temp+age_temp1)/12
-						break
-					elif words[i+2]=='year' and words[i+3]=='and' and words[i+5]=='month':
-						try:
-							month_temp=float(words[i+4])
-							age = age_temp + age_temp1 + month_temp/12
+					if i+5 < size:
+						if words[i+2]=='year' and (words[i+3]!='and' or words[i+3]!='month'):
+							age=age_temp + age_temp1
 							break
-						except ValueError:
-							month_temp=text2int(words[i+4])
-							age = age_temp + age_temp1 + month_temp/12
+						elif words[i+2]=='month':
+							age=(age_temp+age_temp1)/12
 							break
-					elif words[i+2]=='year' and words[i+3]!='and' and words[i+5]=='month':
-						try :
-							month_temp=float(words[i+3])
-							age = age_temp1 + age_temp + month_temp/12
+						elif words[i+2]=='year' and words[i+3]=='and' and words[i+5]=='month':
+							try:
+								month_temp=float(words[i+4])
+								age = age_temp + age_temp1 + month_temp/12
+								break
+							except ValueError:
+								month_temp=text2int(words[i+4])
+								age = age_temp + age_temp1 + month_temp/12
+								break
+						elif words[i+2]=='year' and words[i+3]!='and' and words[i+4]=='month':
+							try :
+								month_temp=float(words[i+3])
+								age = age_temp1 + age_temp + month_temp/12
+								break
+							except ValueError:
+								month_temp=text2int(words[i+3])
+								age= age_temp + age_temp1 + month_temp/12
+								break
+						else:
+							continue
+					if i+4 < size :
+						if words[i+2]=='year' and (words[i+3]!='and' or words[i+3]!='month'):
+							age=age_temp + age_temp1
 							break
-						except ValueError:
-							month_temp=text2int(words[i+3])
-							age= age_temp + age_temp1 + month_temp/12
+						elif words[i+2]=='month':
+							age=(age_temp+age_temp1)/12
 							break
-
+						elif words[i+2]=='year' and words[i+3]!='and' and words[i+4]=='month':
+							try :
+								month_temp=float(words[i+3])
+								age = age_temp1 + age_temp + month_temp/12
+								break
+							except ValueError:
+								month_temp=text2int(words[i+3])
+								age= age_temp + age_temp1 + month_temp/12
+								break
+						else:
+							continue
+					if i+2 < size:
+						if words[i+2]=='year' :
+							age=age_temp + age_temp1
+							break
+						elif words[i+2]=='month':
+							age=(age_temp+age_temp1)/12
+							break
+						else:
+							break
 				except:
-					if words[i+1]=='year' and (words[i+2]!='and' or words[i+3]!='month'):
-						age=age_temp
-						break
-					elif words[i+1]=='month':
-						age=age_temp/12
-						break
-					elif words[i+1]=='year' and words[i+2]=='and' and words[i+4]=='month':
-						try:
-							month_temp=float(words[i+3])
-							age = age + month_temp/12
+					if i+4<size:
+						if words[i+1]=='year' and (words[i+2]!='and' or words[i+3]!='month'):
+							age=age_temp
 							break
-						except ValueError:
-							month_temp=text2int(words[i+3])
-							age = age + month_temp/12
+						elif words[i+1]=='month':
+							age=age_temp/12
 							break
-					elif words[i+1]=='year' and words[i+2]!='and' and words[i+3]=='month':
-						try :
-							month_temp=float(words[i+2])
-							age = age + month_temp/12
+						elif words[i+1]=='year' and words[i+2]=='and' and words[i+4]=='month':
+							try:
+								month_temp=float(words[i+3])
+								age = age + month_temp/12
+								break
+							except ValueError:
+								month_temp=text2int(words[i+3])
+								age = age + month_temp/12
+								break
+						elif words[i+1]=='year' and words[i+2]!='and' and words[i+3]=='month':
+							try :
+								month_temp=float(words[i+2])
+								age = age + month_temp/12
+								break
+							except ValueError:
+								month_temp=text2int(words[i+2])
+								age= age + month_temp/12
+								break
+						else:
+							continue
+					elif i+3<size:
+						if words[i+1]=='year' and (words[i+2]!='and' or words[i+3]!='month'):
+							age=age_temp
 							break
-						except ValueError:
-							month_temp=text2int(words[i+2])
-							age= age + month_temp/12
+						elif words[i+1]=='month':
+							age=age_temp/12
+							break
+						elif words[i+1]=='year' and words[i+2]!='and' and words[i+3]=='month':
+							try :
+								month_temp=float(words[i+2])
+								age = age + month_temp/12
+								break
+							except ValueError:
+								month_temp=text2int(words[i+2])
+								age= age + month_temp/12
+								break
+						else:
+							continue
+					elif i+1<size:
+						if words[i+1]=='year':
+							age=age_temp
+							break
+						elif words[i+1]=='month':
+							age=age_temp/12
 							break
 					else:
 						continue
+
 			except :
 				continue
 	return age
