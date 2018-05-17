@@ -52,10 +52,7 @@ print(sym)
 print(special)
 
 
-# To convert the results into percentages
-for i in special:
-	i=i.lower() #only to convert matching strings to same format
-print(special)
+# To convert the results into numerical data for analysis
 count={} #will work as a flag to count how many times a specialist has been recommended
 for i in special:
 	if i in count.keys():
@@ -63,3 +60,13 @@ for i in special:
 	else:
 		count[i]=1
 print(count)
+
+# To calculate the percentage
+total_flags=sum(count.values())
+percent=count.fromkeys(count.keys())
+for i in percent:
+	percent[i]=(count[i]/total_flags)*100
+print(percent)
+only_specs=list(count.keys()) # Saved the list of specialists
+for i in percent:
+	print('There is '+str(percent[i])+' percent chance that you need to see a '+only_specs[i])
