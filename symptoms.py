@@ -67,6 +67,9 @@ percent=count.fromkeys(count.keys())
 for i in percent:
 	percent[i]=(count[i]/total_flags)*100
 print(percent)
-only_specs=list(count.keys()) # Saved the list of specialists
-for i in percent:
-	print('There is '+str(percent[i])+' percent chance that you need to see a '+only_specs[i])
+only_specs=count.keys() # Saved the list of specialists
+new_list=[]
+for i in only_specs:
+	new_list.append(i)
+for key,value in percent.items():
+	print('There is '+str(value)+' percent chance that you need to see a '+key)
