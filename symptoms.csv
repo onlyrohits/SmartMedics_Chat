@@ -67,17 +67,17 @@ Gynaceologist,acne
 Gynaceologist,hairfall
 Gynaceologist,weight gain
 Gynaceologist,Infertility
-Gynaceologist,1)wdpv
-Gynaceologist,2)mtp
-Gynaceologist,3)vaginal candidiasis
-Gynaceologist,4)vaginitis
-Gynaceologist,5)uti
-Gynaceologist,6)pcos
-Gynaceologist,6)missed period
-Gynaceologist,7)emergency contraception
-Gynaceologist,8)pregnancy quiery
-Gynaceologist,9)periods quiery
-Gynaceologist,10)infertility
+Gynaceologist,wdpv
+Gynaceologist,mtp
+Gynaceologist,vaginal candidiasis
+Gynaceologist,vaginitis
+Gynaceologist,uti
+Gynaceologist,pcos
+Gynaceologist,missed period
+Gynaceologist,emergency contraception
+Gynaceologist,pregnancy quiery
+Gynaceologist,periods quiery
+Gynaceologist,infertility
 General Physician,cough
 General Physician,cold
 General Physician,fever
@@ -90,16 +90,16 @@ General Physician,COPD
 General Physician,Chest pain
 General Physician,abdominal pain
 General Physician,Jaundice
-Gynaecologist,1.Missed periods
-Gynaecologist,2.white discharge
-Gynaecologist,3.pregnancy bleeding
-Gynaecologist,4.respiratory infection and pregnancy
-Gynaecologist,5.gastroenteritis in preg
-Gynaecologist,6.irregular cycles and delayed periods
-Gynaecologist,7.heavy periods
-Gynaecologist,8.infertility
-Gynaecologist,9.pcos
-Gynaecologist,10.painful periods
+Gynaecologist,Missed periods
+Gynaecologist,white discharge
+Gynaecologist,pregnancy bleeding
+Gynaecologist,respiratory infection and pregnancy
+Gynaecologist,gastroenteritis in preg
+Gynaecologist,irregular cycles and delayed periods
+Gynaecologist,heavy periods
+Gynaecologist,infertility
+Gynaecologist,pcos
+Gynaecologist,painful periods
 General physician,Chest pain
 General physician,abdominal pain
 General physician,Jaundice
