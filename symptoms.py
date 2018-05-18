@@ -20,7 +20,6 @@ def parsing(word):
 				else:
 					words.append(element)
 	return words
-
 '''
 
 ################################################################################################
@@ -95,7 +94,6 @@ def symptom_specialist(words,dict_list):
 				if words[i] in j['symptoms']:
 					sym.append(words[i])
 					special.append(j['specialist'])
-
 	return (sym,special)
 	'''
 
@@ -116,12 +114,13 @@ def symptom_specialist(words,dict_list):
 # To take a string as input and tokenise, lemmatize and conversion to lower case
 sentence=input('Enter a string:')
 sentence=sentence.lower()
+'''
 lemma=WordNetLemmatizer()
+'''
 temp=word_tokenize(sentence)
 temp_words=[]
 for m in temp:
-	temp_words.append(lemma.lemmatize(m))
-
+	temp_words.append(m)
 words=temp_words
 
 ##################################################################################################
@@ -138,10 +137,7 @@ for line in reader:
 symptm,special=symptom_specialist(words,dict_list)
 print(symptm,special)
 
-'''
 # To convert the results into percentages
-for i in special:
-	i=i.lower() #only to convert matching strings to same format
 print(special)
 count={} #will work as a flag to count how many times a specialist has been recommended
 for i in special:
@@ -151,4 +147,9 @@ for i in special:
 		count[i]=1
 print(count)
 
-'''
+# To print the final result
+total_sum=sum(count.values())
+for i in count:
+	count[i]=(count[i]/total_sum)*100
+for key,value in count.items():
+	print('There are '+str(value)+' percent chances that you nees to see a '+key)
