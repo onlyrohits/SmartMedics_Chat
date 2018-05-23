@@ -3,13 +3,14 @@
 
 
 sentence=input("Describe your problem: ")
-
+sentence=sentence.lower()
 filepath = '123.csv'
 master_list=[]
 with open(filepath) as fp:  
    line = fp.readline()
    while line:
        stripped_line=line.strip()
+       stripped_line = stripped_line.lower()
        strip_list=stripped_line.split(",")
        master_list.append(strip_list)
        line = fp.readline()
