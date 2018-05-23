@@ -1,0 +1,630 @@
+general physician,abdominal pain,3
+psychiatrist,abnormal behavior,4
+dentist,abnormal taste in mouth,4
+gastroenterologist,acid flavour in mouth,4
+dermatologist,acne,3
+general physician,acne,2
+gynecologist,acne,1
+psychiatrist,adhd child,5
+psychiatrist,adjustment problem,4
+psychiatrist,aggressive,3.5
+general physician,anaphylaxis,3.5
+orthopedic,anaphylaxis,1
+general physician,anemia,2.5
+psychiatrist,angel tour,4
+orthopedic,ankle pain,4
+psychiatrist,anxiety,4
+general physician,arthritis,2.5
+pulmonologist,asthama,5
+general physician,asthama,3.5
+general physician,backache,4
+ENT Specialist,bad breath,3.5
+dentist,bad smell of breath,3.5
+dentist,bad taste in mouth,3.5
+ENT Specialist,bad voice,3.75
+dermatologist,baldness,3.5
+dermatologist,baldness of some parts of the head,5
+urologist,beryllium urine,5
+psychiatrist,big talks,3.5
+dentist,bitter odor of breath,3.5
+dermatologist,black skin of finger,4.4
+dermatologist,black skin of fingers,4.5
+dermatologist,black skin on feet,5
+dermatologist,black spots on face,3.5
+dermatologist,black spots on nails,4
+general physician,bleeding elbow,2
+general physician,bleeding face,2
+general physician,bleeding foot,3
+dentist,bleeding gums,4
+gynecologist,bleeding nipples,4
+general physician,bleeding of arms,3
+ENT Specialist,bleeding of ear,3
+general physician,bleeding of fingers,3
+general physician,bleeding of head,2.5
+general physician,bleeding of hips,3
+dentist,bleeding of jaws,3
+general physician,bleeding of palms,2
+cardiologist,bleeding of sternum,3.5
+general physician,bleeding of thighs,3
+general physician,bleeding of wrists,2
+general physician,bleeding per rectum,4
+general physician,bleeding shin,2
+general physician,bleeding thigh,2
+opthamologist,blepharitis,5
+opthamologist,blindness,5
+dentist,blisters on the tongue,3.5
+opthamologist,blood from eyes,5
+opthamologist,blood in eyes,5
+urologist,blood in urine,4.5
+dermatologist,blue skin of finger,4.5
+dermatologist,blue skin of fingers,4.5
+dermatologist,blue skin of palms,4
+dermatologist,blue skin on foot,5
+opthamologist,blurred vision,5
+general physician,Body ache,2.5
+ENT Specialist,breathing noise,3.5
+ENT Specialist,Breathing trouble,4
+pulmonologist,breathing trouble,4
+general physician,breathlessness,3
+dermatologist,brittle hair,5
+ENT specialist,broad neck,4
+orthopedic,broke bones of jaw,4
+orthopedic,broken ankle,5
+orthopedic,broken bone of finger,5
+orthopedic,broken bone of hip,4
+orthopedic,broken bone of palm,5
+cardiologist,broken bone of sternum,3
+orthopedic,broken bone of sternum,4
+orthopedic,broken bone of wrist,5
+orthopedic,broken bones of arm,5
+orthopedic,broken bones of arms,5
+orthopedic,broken bones of fingers,5
+orthopedic,broken bones of head,3.5
+orthopedic,broken bones of hip,4
+orthopedic,broken bones of jaws,4
+orthopedic,broken bones of palms,5
+orthopedic,broken bones of sternum,4
+orthopedic,broken chest bone,4
+orthopedic,broken chest bone,4
+orthopedic,broken elbow,5
+dermatologist,broken face,3
+orthopedic,broken forerunner,5
+orthopedic,broken hand,4
+orthopedic,broken hands,5
+orthopedic,broken hip,5
+orthopedic,broken rib,4
+orthopedic,broken shin,5
+orthopedic,broken shoulder,5
+orthopedic,broken thigh,4
+general physician,bronchitis,3
+opthamologist,brown colored round eye ball,5
+urologist,brown urine,5
+rheumatologist,bulge in bicep,3.5
+pulmonologist,bulge in chest,2
+general physician,bulge in forerunner,2
+general physician,bulge in shin,2
+dermatologist,bulge in the face,3.5
+rheumatologist,bulge in thigh,3.5
+rheumatologist,bulge in tricep,4.5
+opthamologist,bulging eyes,5
+ENT Specialist,bulgy nose,3
+dentist,burning in mouth,3
+sexologist,burning in private parts,4
+general physician,burning micturition,3
+ENT Specialist,burning of ear,3
+ENT Specialist,burning of ears,3.5
+dentist,burning of mouth,4
+ENT Specialist,burning of nose,3.5
+psychiatrist,burning of scalp,1
+urologist,burning urination,4
+opthamologist,change in eye capacity,5
+cardiologist,chest burn,4
+cardiologist,chest flapping,4.5
+cardiologist,chest pain,2.5
+general physician,chest pain,3
+dentist,chewing continuously,3
+general physician,cold,2
+dermatologist,cold hands,4.5
+dermatologist,color change of fingers,4
+dermatologist,color change of palms,4
+dentist,colorful spit,4
+neurologist,coma,4
+psychiatrist,confusion,4
+general physician,constipation,4
+general physician,cold,3
+ENT Specialist,cough,2.75
+general physician,cough,2
+psychiatrist,craving,2.5
+psychiatrist,craving for food,4
+psychiatrist,crawling sensation,4.5
+psychiatrist,cry,2.5
+general physician,dakar,3
+dentist,damage of tooth enamel,4
+urologist,dark urine,5
+ENT Specialist,deaf,4
+ENT Specialist,deafness,4
+ENT Specialist,Decrease in smell of smell,3.5
+psychiatrist,decrease in social skills,3.5
+rheumatologist,decrease in stiffness of fingers,1.5
+sexologist,decrease in stiffness of penis,3
+orthopedic,decrease in stiffness of thighs,4
+rheumatologist,decrease in stiffness of wrist,1.5
+urologist,decrease in urine,4.5
+urologist,decreased urine,4.5
+psychiatrist,delay in learning language skills,3
+neurologist,delay in motor development,5
+sexologist,delayed ejaculation,5
+gynecologist,delayed periods,5
+psychiatrist,depressed mood,5
+psychiatrist,depression,5
+psychiatrist,depression,5
+psychiatrist,desire for food,2.5
+opthamologist,deteriorating ability to see colors with eyes,5
+dermatologist,development of excessive hair on the face,5
+general physician,diabetes,3
+general physician,diarrhoea,3
+psychiatrist,difficult to pay attention,5
+neurologist,difficult to speak,4
+psychiatrist,difficult to wake up from sleep,5
+orthopedic,difficulty in climbing stairs,3
+rheumatologist,difficulty in climbing stairs,2.5
+psychiatrist,difficulty in finding word,4
+rheumatologist,difficulty in getting up from chair,2.5
+orthopedic,difficulty in getting up from the chair,3
+orthopedic,difficulty in moving elbow,4
+ENT Specialist,difficulty in opening mouth,3
+ENT Specialist,difficulty in opening the mouth,3
+rheumatologist,difficulty in running,2.5
+psychiatrist,difficulty in sleep,5
+neurologist,difficulty in speaking,4
+neurologist,difficulty in swallowing,3
+neurologist,difficulty in talking,3.5
+urologist,difficulty in urinating,5
+orthopedic,difficulty picking up objects,4
+orthopedic,difficulty running,3
+urologist,difficulty urinating,5
+orthopedic,difficulty walking,3
+opthamologist,dilated pupil,2.5
+opthamologist,diminished eyesight at night,5
+general physician,disc,3.5
+opthamologist,discharge from eyes,5
+psychiatrist,disorder,2
+orthopedic,disordered arm,4
+orthopedic,disordered finger,3
+orthopedic,disordered hip,4
+ENT Specialist,disordered mouth,3
+ENT Specialist,Disordered Nose,3
+orthopedic,disordered palm,3
+cardiologist,disordered sternum,3.5
+orthopedic,disordered thigh,5
+orthopedic,disordered wrist,3
+orthopedic,disordered wrists,3
+psychiatrist,dizziness,3
+psychiatrist,dizzy,3
+dentist,do not meet the teeth properly,4
+opthamologist,double vision,5
+dentist,Drainage from mouth,3.5
+ENT Specialist,Drainage from nose,3.5
+opthamologist,dry eyes,4
+dentist,dry mouth,3
+opthamologist,dystopia,5
+general physician,earache,3
+ENT Specialist,eardrum,4
+sexologist,early ejaculation,5
+general physician,easy fatiguability,4
+dermatologist,eczema,4
+orthopedic,elbow joint pain,3.5
+sexologist,emergency contraception,5
+psychiatrist,emotions,3
+opthamologist,enlarged eye,5
+sexologist,erectile dysfunction,5
+sexologist,erection disorder,5
+sexologist,excessive masturbation,5
+dermatologist,excessive sweating of palms,4
+dentist,excessive water in month,3
+opthamologist,eye injury,5
+opthamologist,eye irritation,5
+opthamologist,eyelids,5
+opthamologist,eyes are bleeding,5
+general physician,face is bleeding,2
+cardiologist,fast pulsation,4.5
+pulmonologist,fast pulsation,2.5
+pulmonologist,fast pulse,3
+neurologist,fast speech,4.5
+neurologist,fast speech,5
+psychiatrist,fatigue,1
+psychiatrist,fear,2.5
+sexologist,fear of sex,5
+psychiatrist,fear of water,4.5
+psychiatrist,fear of wind,4.5
+psychiatrist,feeling of pressure or heaviness,5
+psychiatrist,feeling walking on some skull,4
+general physician,fever,2
+psychiatrist,fever,1
+gynecologist,fibroids,5
+general physician,fistula,3
+dentist,flavor reduction,4
+general physician,flu,4
+psychiatrist,fluctuations of mood,4
+dentist,fluffy tongue,4
+ENT Specialist,frequent infection of nose,3.5
+urologist,frequent urination at night,5
+psychiatrist,frightening dreams,5
+psychiatrist,frightening thoughts,4.5
+general physician,gastritis,3.5
+gastroenterologist,gastroenteritis,5
+gynecologist,gastroenteritis in pregnancy,4
+parasitologist,germs,2
+neurologist,gibberish,3
+dentist,grinding teeth,3.5
+dentist,gum ache,3.5
+dermatologist,hair fall,5
+general physician,hair fall,1.5
+psychiatrist,hallucination,5
+psychiatrist,head ache,1
+general physician,head ache,2
+gynecologist,heavy periods,5
+general physician,height issues,4
+general physician,hemorrhoids,3
+orthopedic,hip bone,4
+general physician,hiv risk,4
+ENT Specialist,hoarse voice,3.75
+sexologist,homosexuality,5
+psychiatrist,hyperactive,4
+general physician,hypertension,2
+ENT Specialist,hyperthyroidism,5
+pulmonologist,hyperventilating,3
+pulmonologist,hyperventilation,3
+ENT Specialist,hypothyroidism,5
+rheumatologist,inability to move hands,1.5
+psychiatrist,inappropriate behavior,4
+opthamologist,incapacitated eye,4
+ENT Specialist,increase in thirst,3.5
+ENT Specialist,increased glands,1
+general physician,infections,4
+gynecologist,infertility,5
+dermatologist,injury marks on face,4
+parasitologist,insects,2
+general physician,insomnia,1.5
+psychiatrist,intense desire for food,4
+gynecologist,irregular cycles,5
+cardiologist,irregular heart beat,5
+pulmonologist,irregular heartbeat,3
+gynecologist,irritability,2
+opthamologist,irritation in the eyes,5
+opthamologist,itching in eyes,4
+opthamologist,itching in eyes,4
+sexologist,itching in private parts,4
+ENT Specialist,itching of ear,3
+ENT Specialist,itching of ears,3
+dentist,itching of mouth,4
+ENT Specialist,itching of nose,3.5
+psychiatrist,itching of scalp,1
+general physician,jaundice,5
+dentist,jaw block,4
+orthopedic,joint instability,4
+orthopedic,joint pain,5
+rheumatologist,joint pain in hip,3.5
+rheumatologist,joint pain in wrists,1.5
+general physician,joint pains,3
+rheumatologist,joints are unable to move,1.5
+orthopedic,knee pain,4
+sexologist,lack of desire of sex,2.5
+psychiatrist,lack of happiness,5
+psychiatrist,lack of self care,4.5
+psychiatrist,lack of sense,3.5
+psychiatrist,lack of sleep,5
+psychiatrist,lack of social skills,3.5
+opthamologist,lack of vision,5
+general physician,laryngitis,4
+general physician,legs cramp,4
+general physician,loose motion,5
+general physician,loose motions,5
+sexologist,loose vagina,5
+general physician,loss of appetite,3
+sexologist,loss of erection,5
+rheumatologist,lump in arm,2
+rheumatologist,lump in bicep,4.5
+pulmonologist,lump in chest,2
+ENT Specialist,lump in ear,3.5
+rheumatologist,lump in finger,2
+general physician,lump in forerunner,2
+ENT specialist,lump in head,4
+rheumatologist,lump in hip,2
+ENT Specialist,lump in jaw,3
+dentist,lump in mouth,4
+ENT Specialist,lump in neck,3
+ENT Specialist,lump in nose,3
+rheumatologist,lump in palm,2
+general physician,lump in shin,2
+general physician,lump in skull,3
+cardiologist,lump in sternum,3
+rheumatologist,lump in thigh,2
+rheumatologist,lump in tricep,4.5
+rheumatologist,lump in upper arm,4
+rheumatologist,lump in wrist,2
+opthamologist,lump on eyelids,4.5
+dermatologist,lump on face,3.5
+dentist,lump on tongue,4.5
+dermatologist,marks on face,5
+general physician,mellitus,3
+psychiatrist,memory problem,4
+psychiatrist,memory related problem,4
+gynecologist,menopausal issues,5
+gynecologist,menstrual irregularities,5
+gynecologist,menstrual pain,5
+psychiatrist,mentally retarded child,5
+ENT specialist,migraine,4
+gynecologist,missed period,3
+gynecologist,missed periods,5
+gynecologist,mtp,5
+opthamologist,mucus in eyes,5
+opthamologist,mucus in the eyes,5
+rheumatologist,muscular pain,5
+rheumatologist,muscular pain in fingers,1.5
+rheumatologist,muscular pain in neck,4
+pulmonologist,muscular spasms,2.5
+dermatologist,muscular spasms in face,3.5
+ENT Specialist,Nasal Breathing Difficulty,4
+ENT Specialist,nasal congestion,3.5
+opthamologist,night blindness,5
+gynecologist,nipple bleeding,4
+gynecologist,nipple discharge,5
+ENT Specialist,noise sensitive,3.5
+ENT Specialist,noise while breathing,3.5
+ENT Specialist,noser,3.5
+ENT Specialist,not able to open jaw,3
+ENT Specialist,not able to open mouth,3
+sexologist,not getting pregnant,3
+cardiologist,numb chest,3
+psychiatrist,numb head,2
+rheumatologist,numb thigh,2
+general physician,numb wrist,3
+pulmonologist,numbness,3
+dermatologist,numbness in face,3.5
+rheumatologist,numbness in feet,2
+general physician,numbness in shin,2
+rheumatologist,numbness in thigh,4
+general physician,numbness of arms,2
+ENT Specialist,numbness of ear,3
+ENT Specialist,numbness of ears,3
+rheumatologist,numbness of fingers,2
+psychiatrist,numbness of head,2
+rheumatologist,numbness of hip,2
+ENT Specialist,numbness of nose,3
+rheumatologist,numbness of palms,2
+general physician,numbness of wrist,3
+opthamologist,obscure spot,5
+neurologist,odd voice,4.5
+orthopedic,osteoarthritis,5
+gynecologist,ovarian cysts,5
+general physician,pain abdomen,3
+general physician,pain in abdomen,3
+rheumatologist,pain in arms,1.5
+cardiologist,pain in chest,2.5
+pulmonologist,pain in chest,2
+ENT Specialist,pain in ear,3
+opthamologist,pain in eyes,3
+general physician,pain in forerunner,2
+general physician,pain in leg,2
+dentist,pain in mouth,5
+ENT Specialist,pain in nose,2.5
+sexologist,pain in sex,5
+general physician,pain in shin,2
+general physician,pain in shoulder,2
+orthopedic,pain in the ankle,4
+orthopedic,pain in the knee,2.5
+orthopedic,pain in the knees,4
+sexologist,pain in the testicles,3.5
+general physician,pain in thigh,2
+orthopedic,pain in thigh,3
+gastroenterologist,pain on swallowing,5
+orthopedic,painful palms,3
+gynecologist,painful periods,5
+sexologist,parasites on private parts,5
+opthamologist,partial loss of vision,5
+general physician,pcod,3.5
+gynecologist,pcos,5
+sexologist,pearly penile papules,5
+gynecologist,periods quiery,5
+psychiatrist,personality change,5
+psychiatrist,perspiration,3.5
+psychiatrist,phobia,2.5
+general physician,piles,3.5
+general physician,piles,4
+gynecologist,pregnancy bleeding,5
+gynecologist,pregnancy quiery,5
+gynecologist,pregnency and delivery related issues,5
+sexologist,premature ejaculation,5
+gynecologist,premenstrual problems,5
+psychiatrist,problem in learning language skills,4
+neurologist,problem in motor development,5
+psychiatrist,problem in waking up from sleep,5
+general physician,problem swallowing,2
+general physician,prolapse,4
+general physician,pruritus,3
+dermatologist,psoriasis,4
+opthamologist,pupil,2.5
+pulmonologist,rapid breathing,3
+pulmonologist,rapid heart rate,3
+opthamologist,red eye,2
+opthamologist,red eyes,2
+dentist,red gum,5
+dentist,red spots in mouth,5
+dermatologist,red spots on nails,4
+dentist,red tongue,5
+urologist,red urine,4.5
+psychiatrist,repeated thoughts of checking,5
+psychiatrist,repeating same thing,4
+psychiatrist,repeating the phrases,4
+psychiatrist,repeating the words,4
+gynecologist,respiratory infection and pregnancy,5
+psychiatrist,restless,4
+pulmonologist,restlessness,2.5
+general physician,restlessness of fingers,3
+ENT Specialist,restlessness of nose,2.5
+psychiatrist,revolving sensation,3
+orthopedic,ribs,3.5
+rheumatologist,rotator cuff injury,3.5
+psychiatrist,sadness,3.5
+dermatologist,scabies,2.5
+general physician,scabies,3.5
+psychiatrist,scary dreams,5
+psychiatrist,scary thoughts,4.5
+pulmonologist,scrofula,4
+opthamologist,scurry,5
+opthamologist,semolina,5
+sexologist,sex discharge,5
+sexologist,sex weakness,4
+psychiatrist,shak,3.5
+general physician,short fourth finger,3.5
+pulmonologist,shortness of breath,4
+pulmonologist,shortness of breath,3.5
+dermatologist,skin infections,5
+dermatologist,skin irritation of scalp,5
+psychiatrist,sleep disturbance,3.5
+ENT specialist,small neck,4
+sexologist,small size of penis,5
+dentist,smooth tongue,3.5
+ENT Specialist,sneeze,2
+ENT Specialist,sneezing,2
+ENT Specialist,snore,4
+ENT Specialist,snoring,4
+pulmonologist,snoring,4
+dentist,sore mouth,4
+ENT Specialist,sore throat,2
+pulmonologist,spasms,2
+pulmonologist,spasms in chest,2
+rheumatologist,spasms in thigh,3.5
+neurologist,speaking fast,4.5
+neurologist,speaking very fast,4.5
+ENT Specialist,speech enhancement,3.75
+sexologist,sperm count,4
+psychiatrist,spitting,1
+opthamologist,spot in eyes,5
+ENT Specialist,spots in throat,4
+ENT Specialist,spots on tonsils,4
+gastroenterologist,stagnation of food while swallowing,5
+general physician,stomach ache,3
+psychiatrist,stress,4.5
+urologist,sudden urination,4.5
+pulmonologist,suffocation,3.5
+opthamologist,sunken eyes,3
+dentist,suppressed mouth,4
+rheumatologist,swelling in arms,2
+orthopedic,swelling in bone,3
+rheumatologist,swelling in chest,3.5
+rheumatologist,swelling in elbow,3.5
+opthamologist,swelling in eye,5
+opthamologist,swelling in eyes,5
+dermatologist,swelling in face,3.5
+general physician,swelling in forerunner,2
+sexologist,swelling in groin,4.5
+sexologist,swelling in private parts,4.5
+general physician,swelling in shin,2
+rheumatologist,swelling in shoulder,3.5
+rheumatologist,swelling in thigh,4
+general physician,swelling in thighs,3
+ENT Specialist,swelling of ear,3.5
+ENT Specialist,swelling of ears,3
+opthamologist,swelling of eye,5
+opthamologist,swelling of eyes,5
+general physician,swelling of fingers,3
+dentist,swelling of gums,4
+rheumatologist,swelling of hip,3.5
+rheumatologist,swelling of hips,3.5
+ENT Specialist,swelling of lips,3
+ENT Specialist,swelling of mouth,3
+ENT Specialist,swelling of nose,3
+rheumatologist,swelling of palms,2
+dermatologist,swelling of scalp,5
+cardiologist,swelling of sternum,3.5
+ENT Specialist,swelling of tonsils,4
+rheumatologist,swelling of wrist,2
+rheumatologist,swelling of wrists,2
+opthamologist,swollen eye,5
+opthamologist,swollen eyes,5
+dermatologist,swollen face,3.5
+ENT Specialist,swollen glands,1
+dentist,swollen gums,4
+ENT Specialist,swollen lips,3
+ENT Specialist,swollen mouth,3
+dermatologist,Swollen scalp,5
+cardiologist,swollen sternum,3.5
+general physician,swollen thighs,3
+ENT Specialist,swollen tongue,4
+ENT Specialist,swollen tonsils,4
+sexologist,testicles,2.5
+ENT Specialist,thick saliva,3
+ENT Specialist,thirsty,3
+ENT Specialist,throat spots,4
+general physician,thyroid disorder,3.5
+sexologist,tight foreskin of penis,4
+sexologist,tight vagina,5
+dermatologist,tinea,3.5
+ENT Specialist,tingling of nose,2.5
+psychiatrist,to cry,3.5
+rheumatologist,torn biceps,4.5
+dentist,torn tongue,3.5
+rheumatologist,torn triceps,4.5
+neurologist,trembling hands,4.5
+pulmonologist,trouble breathing,4
+rheumatologist,twisted nails,1.5
+orthopedic,unable to bear load,3
+rheumatologist,unable to bear load,1.5
+orthopedic,unable to lift heavy,3
+orthopedic,unable to move,3
+orthopedic,unable to move elbow,3.5
+orthopedic,unable to move fingers,4
+ENT Specialist,unable to open jaw,3
+ENT Specialist,unable to open mouth,3
+psychiatrist,unconscious,1.5
+psychiatrist,unconsciousness,1.5
+sexologist,unprotected sex,4
+psychiatrist,unrest,2.5
+opthamologist,ununiform pupil,4
+neurologist,unusual facial expression,3.5
+dermatologist,unusually round face,3
+urologist,urinary tract infection,5
+urologist,urinating,5
+general physician,urine infection,3
+dermatologist,urticaria,4
+gynecologist,uti,5
+gynecologist,vaginal candidiasis,5
+gynecologist,vaginal infection,5
+sexologist,vaginal odor,4.5
+sexologist,vaginismus,5
+gynecologist,vaginitis,5
+general physician,vertigo,3
+psychiatrist,violent,3.5
+sexologist,visible insects on private parts,5
+dermatologist,visible insects on scalp,5
+dermatologist,visible parasites on scalp,5
+general physician,vomiting,5
+gynecologist,vulval infection,5
+psychiatrist,waham,4
+psychiatrist,wander,3.5
+gynecologist,wdpv,5
+rheumatologist,weak fingers,1.5
+rheumatologist,weak hands,1.5
+orthopedic,weak thighs,3
+orthopedic,weak wrists,2
+orthopedic,weakness,1
+orthopedic,weakness in hands,2
+general physician,weakness in thighs,2
+general physician,weakness in wrists,2
+general physician,weakness of limbs,4
+rheumatologist,weakness of palms,1.5
+gynecologist,weight gain,2
+ENT Specialist,weird smell,3
+ENT Specialist,weird taste,3
+opthamologist,wet eyes,3.5
+pulmonologist,wheezing,4
+sexologist,white discharge,3
+dermatologist,white hair,5
+dentist,white spots inside mouth,4
+dermatologist,white spots on the scalp,5
+dentist,white spots on tongue,4
+dermatologist,wrinkle in a single palm,4
+dermatologist,wrinkles,5
+opthamologist,yellow eyes,3
