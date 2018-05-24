@@ -123,7 +123,6 @@ cardiologist,chest flapping,4.5
 cardiologist,chest pain,2.5
 general physician,chest pain,3
 dentist,chewing continuously,3
-general physician,cold,2
 dermatologist,cold hands,4.5
 dermatologist,color change of fingers,4
 dermatologist,color change of palms,4
@@ -244,7 +243,7 @@ psychiatrist,fever,1
 gynecologist,fibroids,5
 general physician,fistula,3
 dentist,flavor reduction,4
-general physician,flu,4
+general physician,flu,0.5
 psychiatrist,fluctuations of mood,4
 dentist,fluffy tongue,4
 ENT Specialist,frequent infection of nose,3.5
@@ -325,7 +324,7 @@ general physician,loss of appetite,3
 sexologist,loss of erection,5
 rheumatologist,lump in arm,2
 rheumatologist,lump in bicep,4.5
-pulmonologist,lump in chest,2
+general physician,lump in chest,1
 ENT Specialist,lump in ear,3.5
 rheumatologist,lump in finger,2
 general physician,lump in forerunner,2
@@ -609,7 +608,6 @@ rheumatologist,weak fingers,1.5
 rheumatologist,weak hands,1.5
 orthopedic,weak thighs,3
 orthopedic,weak wrists,2
-orthopedic,weakness,1
 orthopedic,weakness in hands,2
 general physician,weakness in thighs,2
 general physician,weakness in wrists,2
@@ -653,3 +651,24 @@ orthopedic,swelling in left leg,3.5
 orthopedic,swelling in right leg,3.5
 sexologist,protection,2.5
 gynecologist,periods,3.5
+dermatologist,rashes,4.5
+dermatologist,skin problems,5
+sexologist,unprotected vaginal sex,4.5
+general physician,swelling armpit,1.5
+general physician,headache,1
+general physician,weakness,1.5
+dermatologist,itching,2.5
+pulmonologist,lungs,4
+pediatrician,baby,4.5
+sexologist,penetration,3.5
+neurologist,paralysis,4.5
+neurologist,paralyse,4
+gastroenterologist,acidity,3.5
+oncologist,bloody saliva,1.5
+oncologist,breast lump,2.5
+oncologist,lump in breast,3.5
+oncologist,lump in testicles,4
+oncologist,blood in urine,2
+oncologist,vaginal bleeding,1
+gynecologist,vaginal bleeding,3
+oncologist,lump in chest,3.5
