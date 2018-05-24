@@ -65,6 +65,8 @@ print(sentence)
 
 sum_list={}
 
+dominant_key=''
+psych_present=''
 primary=['sex', 'cancer', 'eye']
 primary_indices={}
 for m in primary:
@@ -77,7 +79,13 @@ for key,value in primary_indices.items():
 
 if min_key=='sex':
 	if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-		
+		dominant_key='sexologist'
+		psych_present='psychiatrist'
+
+if min_key=='cancer':
+	dominant_key='oncologist'
+if min_key=='eye':
+	dominant_key='opthalmologist'
 
 
 
