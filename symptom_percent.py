@@ -61,8 +61,25 @@ with open(filepath) as fp:
 
 Sym_list=list(set(Sym_list))	
 sentence=correction(sentence,Sym_list)
+print(sentence)
 
 sum_list={}
+
+primary=['sex', 'cancer', 'eye']
+primary_indices={}
+for m in primary:
+	if sentence.find(m)>=0:
+		primary_indices[m]=sentence.find(m)
+min_key=''
+for key,value in primary_indices.items():
+	if primary_indices[key]==min(primary_indices.values()):
+		min_key=key
+
+if min_key=='sex':
+	if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+		
+
+
 
 for element in master_list:
 	if sentence.find(element[1]) >= 0 :
