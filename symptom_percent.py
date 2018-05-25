@@ -5,6 +5,7 @@ from autocorrect import spell
 
 #################################################################
 
+# Introduction and removal of stopwords
 def correction(sentence,List):
 	stop_words=set(stopwords.words('english'))
 	word_tokens = word_tokenize(sentence)
@@ -39,6 +40,7 @@ def correction(sentence,List):
 
 ########################################################################################################
 
+# Taking input
 sentence=input("Describe your problem: ")
 sentence=sentence.lower()
 filepath = '123.csv'
@@ -46,7 +48,7 @@ master_list=[]
 Sym_list=[]
 
 
-
+#reading the file and storing the specialists, symptoms and weights in a list of lists
 with open(filepath) as fp:  
    line = fp.readline()
    while line:
@@ -63,11 +65,9 @@ with open(filepath) as fp:
 Sym_list=list(set(Sym_list))	
 sentence=correction(sentence,Sym_list)
 
-
-print(sentence)
-
 ###############################################################################################
 
+# Fifuring out the gender by matching the words to an existing dataset containing gender info
 male=[]
 female=[]
 filename='MaleFemale.csv'
@@ -88,11 +88,12 @@ for sex in word_tokenize(sentence):
 
 #####################################################################################
 
+# Figuring out the presence of dominant and co-dominant keywords in the sentence
 sum_list={}
 dominant_key=''
 psych_present=''
 primary=['sex', 'cancer', 'eye','abortion']
-primary_indices={}
+primary_indices={} # dictionary used to store the keywords and their indices
 
 for m in primary:
 	if sentence.find(m)>=0:
@@ -131,7 +132,7 @@ elif min_key=='eye':
 elif 'abortion' in 'sentence':
 	dominant_key='gynaecologist'
 	print('There is a high probability that you should consult a '+ dominant_key)
-else:
+else: # The following code runs if the dominant keywords are not present.
 	for element in master_list:
 		if sentence.find(element[1]) >= 0 :
 			if not (element[0] in sum_list.keys()):
