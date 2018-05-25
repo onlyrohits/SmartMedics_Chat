@@ -302,7 +302,7 @@ general physician,jaundice,5
 dentist,jaw block,4
 orthopedic,joint instability,4
 orthopedic,joint pain,5
-rheumatologist,joint pain in hip,3.5
+rheumatologist,pain in hip,3.5
 rheumatologist,joint pain in wrists,1.5
 general physician,joint pains,3
 rheumatologist,joints are unable to move,1.5
@@ -671,5 +671,3 @@ oncologist,blood in urine,2
 oncologist,vaginal bleeding,1
 gynecologist,vaginal bleeding,3
 oncologist,lump in chest,3.5
-sexologist,sex life,3.5
-oncologist,tumours,4
