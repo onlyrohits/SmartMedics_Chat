@@ -72,20 +72,31 @@ primary_indices={}
 for m in primary:
 	if sentence.find(m)>=0:
 		primary_indices[m]=sentence.find(m)
+	else:
+
 min_key=''
 for key,value in primary_indices.items():
 	if primary_indices[key]==min(primary_indices.values()):
 		min_key=key
 
 if min_key=='sex':
-	if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-		dominant_key='sexologist'
-		psych_present='psychiatrist'
+	if gender=='male':
+		if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+			dominant_key='sexologist'
+			psych_present='psychiatrist'
+			print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+	else:
+		if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+			dominant_key='gynaecologist'
+			psych_present='psychiatrist'
+			print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
 
 if min_key=='cancer':
 	dominant_key='oncologist'
+	print('There is a high probability that you should consult a '+dominant_key)
 if min_key=='eye':
 	dominant_key='opthalmologist'
+	print('There is a high probability that you should consult a '+dominant_key)
 
 
 
