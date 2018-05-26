@@ -140,6 +140,7 @@ else: # The following code runs if the dominant keywords are not present.
 			else:
 				value=sum_list[element[0]]+float(element[2])
 				sum_list[element[0]]=value
+				
 	total=0
 	for value in sum_list.values():
 		total = total + value
