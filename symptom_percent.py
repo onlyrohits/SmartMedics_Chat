@@ -45,6 +45,7 @@ filepath = 'example2.csv'
 symptom_list=[]
 keyword_list=[]
 disease_list=[]
+psych_list=[]
 
 
 with open(filepath) as fp:  
@@ -71,6 +72,19 @@ with open('DiseasesData.csv') as fp:
 		keyword_list.extend(a)
 		keyword_list.extend(b)
 		disease_list.append(strip_list)
+		line=fp.readline()
+
+with open('psychiatrist.csv') as fp:
+	line = fp.readline()
+	while line:
+		stripped_line=line.strip()
+		stripped_line=stripped_line.lower()
+		strip_list=stripped_line.split(",")
+		a=strip_list[0].split(" ")
+		b=strip_list[1].split(" ")
+		keyword_list.extend(a)
+		keyword_list.extend(b)
+		psych_list.append(strip_list)
 		line=fp.readline()
 
 keyword_list=list(set(keyword_list))	
@@ -116,7 +130,7 @@ for element in disease_list:
 		specialist=element[0]
 		break
 if flag==1:
-	print("You should consult {} for {} ".format(specialist,disease))
+	print("You should consult a {}".format(specialist))
 
 elif flag==0:	
 	for m in primary:
@@ -176,5 +190,18 @@ elif flag==0:
 			total = total + value
 		for key in symptom_dict.keys():
 			symptom_dict[key] = symptom_dict[key]*100/total
-		for key,value in symptom_dict.items():
-			print("The probability of going to {} is {} percent".format(key,value))
+
+		sortedDict={}
+		new_list=sorted(symptom_dict.items(), key = lambda t: t[1], reverse = True)
+		print_list=[]
+		flag1=0
+		for item in new_list:
+			flag1=flag1+1
+			if flag1 < 3:
+				print_list.append(item[0])
+		if print_list!=[]:
+			print('Based on the symptoms you should consult a '+' and '.join(print_list))	
+		if symptom_dict=={}:
+			for element in psych_list:
+				if sentence.find(element[1])>=0:
+					print('You should visit a psychiatrist')
