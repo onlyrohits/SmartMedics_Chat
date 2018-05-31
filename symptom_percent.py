@@ -82,6 +82,7 @@ symptom_list=[]
 keyword_list=[]
 disease_list=[]
 psych_list=[]
+short_disease_list=[]
 
 
 with open(filepath) as fp:  
@@ -123,6 +124,19 @@ with open('psychiatrist.csv') as fp:
 		psych_list.append(strip_list)
 		line=fp.readline()
 
+with open('short_diseases.csv') as fp:
+	line = fp.readline()
+	while line:
+		stripped_line=line.strip()
+		stripped_line=stripped_line.lower()
+		strip_list=stripped_line.split(",")
+		a=strip_list[0].split(" ")
+		b=strip_list[1].split(" ")
+		keyword_list.extend(a)
+		keyword_list.extend(b)
+		short_disease_list.append(strip_list)
+		line=fp.readline()
+
 keyword_list=list(set(keyword_list))	
 sentence=correction(sentence,keyword_list)
 
@@ -142,11 +156,9 @@ for i in array:
 gender=''
 for sex in word_tokenize(sentence):
 	if sex in male:
-		print(sex)
 		gender='Male'
 		break
 	elif sex in female:
-		print(sex)
 		gender='Female'
 		break
 
@@ -164,84 +176,100 @@ primary_indices={}
 flag=0
 disease=""
 specialist=""
-for element in disease_list:
-	if sentence.find(element[1])>=0:
-		flag=1
-		disease=element[1]
-		specialist=element[0]
+for elements in short_disease_list:
+	if elements[1] in word_tokenize(sentence):
+		specialist1=elements[0]
+		print('In our opinion you should consult a '+specialist1)
 		break
-if flag==1:
-	print("You should consult a {} for {}".format(specialist,disease))
-
-elif flag==0:	
-	for m in primary:
-		if sentence.find(m)>=0:
-			primary_indices[m]=sentence.find(m)
-
-	min_key=''
-
-	for key,value in primary_indices.items():
-		if primary_indices[key]==min(primary_indices.values()):
-			min_key=key
-
-	if min_key=='sex':
-		if gender=='Female' or sentence.find('pregnancy')>=0 or sentence.find('pregnant')>=0 or sentence.find('period')>=0 :
-			if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-				dominant_key='gynaecologist'
-				psych_present='psychiatrist'
-				print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-			else:
-				dominant_key='gynaecologist'
-				print('There is a high probability that you should consult a '+dominant_key)
-		else:
-			if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-				dominant_key='sexologist'
-				psych_present='psychiatrist'
-				print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-			elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
-				dominant_key='gynaecologist'
-				print('There is a high probability that you should consult a '+dominant_key)
-			else:
-				dominant_key='sexologist'
-				print('There is a high probability that you should consult a '+dominant_key)
-
-	elif min_key=='cancer':
-		dominant_key='oncologist'
-		print('There is a high probability that you should consult a '+ dominant_key)
-	elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
-		if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
-			dominant_key='gynaecologist'
-			psych_present='psychiatrist'
-			print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-		else:
-			dominant_key='gynaecologist'
-			print('There is a high probability that you should consult a '+dominant_key)
-
-
 	else:
-		for element in symptom_list:
-			if sentence.find(element[1]) >= 0 :
-				if not (element[0] in symptom_dict.keys()):
-					symptom_dict[element[0]]=float(element[2])
-				else:
-					value=symptom_dict[element[0]]+float(element[2])
-					symptom_dict[element[0]]=value
-		total=0
-		for value in symptom_dict.values():
-			total = total + value
-		for key in symptom_dict.keys():
-			symptom_dict[key] = symptom_dict[key]*100/total
+		for element in disease_list:
+			if sentence.find(element[1])>=0:
+				flag=1
+				disease=element[1]
+				specialist=element[0]
+				break
+		if flag==1:
+			print("You should consult a {} for {}".format(specialist,disease))
+			break
+		elif flag==0:	
+			for m in primary:
+				if sentence.find(m)>=0:
+					primary_indices[m]=sentence.find(m)
 
-		new_list=sorted(symptom_dict.items(), key = lambda t: t[1], reverse = True)
-		print_list=[]
-		flag1=0
-		for item in new_list:
-			flag1=flag1+1
-			if flag1 < 3:
-				print_list.append(item[0])
-		if print_list!=[]:
-			print('Based on the symptoms you should consult a '+' and '.join(print_list))	
-		if symptom_dict=={}:
-			for element in psych_list:
-				if sentence.find(element[1])>=0:
-					print('You should visit a psychiatrist')
+			min_key=''
+
+			for key,value in primary_indices.items():
+				if primary_indices[key]==min(primary_indices.values()):
+					min_key=key
+
+			if min_key=='sex':
+				if gender=='Female' or sentence.find('pregnancy')>=0 or sentence.find('pregnant')>=0 or sentence.find('period')>=0 :
+					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+						dominant_key='gynaecologist'
+						psych_present='psychiatrist'
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						break
+					else:
+						dominant_key='gynaecologist'
+						print('There is a high probability that you should consult a '+dominant_key)
+						break
+				else:
+					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+						dominant_key='sexologist'
+						psych_present='psychiatrist'
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						break
+					elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
+						dominant_key='gynaecologist'
+						print('There is a high probability that you should consult a '+dominant_key)
+						break
+					else:
+						dominant_key='sexologist'
+						print('There is a high probability that you should consult a '+dominant_key)
+						break
+
+			elif min_key=='cancer':
+				dominant_key='oncologist'
+				print('There is a high probability that you should consult a '+ dominant_key)
+				break
+			elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
+				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+					dominant_key='gynaecologist'
+					psych_present='psychiatrist'
+					print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+					break
+				else:
+					dominant_key='gynaecologist'
+					print('There is a high probability that you should consult a '+dominant_key)
+					break
+
+
+			else:
+				for element in symptom_list:
+					if sentence.find(element[1]) >= 0 :
+						if not (element[0] in symptom_dict.keys()):
+							symptom_dict[element[0]]=float(element[2])
+						else:
+							value=symptom_dict[element[0]]+float(element[2])
+							symptom_dict[element[0]]=value
+				total=0
+				for value in symptom_dict.values():
+					total = total + value
+				for key in symptom_dict.keys():
+					symptom_dict[key] = symptom_dict[key]*100/total
+
+				new_list=sorted(symptom_dict.items(), key = lambda t: t[1], reverse = True)
+				print_list=[]
+				flag1=0
+				for item in new_list:
+					flag1=flag1+1
+					if flag1 < 3:
+						print_list.append(item[0])
+				if print_list!=[]:
+					print('Based on the symptoms you should consult a '+' and '.join(print_list))	
+					break
+				if symptom_dict=={}:
+					for element in psych_list:
+						if sentence.find(element[1])>=0:
+							print('You should visit a psychiatrist')
+							break
