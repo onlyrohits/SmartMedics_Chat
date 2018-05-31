@@ -26,6 +26,105 @@ cardiologist,Supraventricular tachycardia
 cardiologist,syncope
 cardiologist,triglycerides
 cardiologist,vasovagal episodes
+dermatologist,alopecia
+dermatologist,lichen planus pigmentosus
+dermatologist,leucoderma
+dermatologist,Acne Rosasea
+dermatologist,Erythema Migrans
+dermatologist,Lice
+dermatologist,Scabies
+dermatologist,Angioma
+dermatologist,Dermatofibroma
+dermatologist,Moles
+dermatologist,Lipoma
+dermatologist,Milia
+dermatologist,Seborrheic Keratosis
+dermatologist,Skin Tag
+dermatologist,Spitz Nevus
+dermatologist,Bullous Pemphigoid
+dermatologist,Dermatitis Herpetiformis
+dermatologist,Pemphigus
+dermatologist,Pemphigoid
+dermatologist,Hyperpigmentation
+dermatologist,Hypopigmentation
+dermatologist,Allergic Contact Dermatitis
+dermatologist,Atopic Dermatitis
+dermatologist,seborrhea
+dermatologist,Dermatitis
+dermatologist,Dry Skin
+dermatologist,Irritant Contact Dermatitis
+dermatologist,Nummular Dermatitis
+dermatologist,Perioral Dermatitis
+dermatologist,Photosensitive Dermatitis
+dermatologist,Poison Ivy
+dermatologist,Poison Oak
+dermatologist,Poison Sumac
+dermatologist,Stasis Dermatitis
+dermatologist,eczema
+dermatologist,Alopecia Areata
+dermatologist,Cicatricial Alopecias
+dermatologist,Female Pattern Baldness
+dermatologist,Folliculitis
+dermatologist,Hidradenitis Suppuritiva
+dermatologist,Hirsutism
+dermatologist,Male Pattern Alopecia
+dermatologist,Telogen Effluvium
+dermatologist,Traction Alopecia
+dermatologist,Trichotillomania
+dermatologist,Athlete’s Foot
+dermatologist,Candida
+dermatologist,Cellulitis
+dermatologist,Condylomata Acuminata
+dermatologist,Herpes Simplex
+dermatologist,Herpes Zoster
+dermatologist,Impetigo
+dermatologist,Molluscum Contagiosum
+dermatologist,Shingles
+dermatologist,Tinea Versicolor
+dermatologist,Tinea Capitis
+dermatologist,Tinea Corporis
+dermatologist,Tinea Cruris
+dermatologist,Tinea Pedis
+dermatologist,Tinea Manuum
+dermatologist,Viral Exanthem
+dermatologist,Warts
+dermatologist,Herpes Zoster
+dermatologist,Hemangiomas
+dermatologist,Port Wine Stains
+dermatologist,Lichen Planus
+dermatologist,Pityriasis Rubra Pilaris
+dermatologist,Psoriasis
+dermatologist,Lentigos
+dermatologist,Melasma
+dermatologist,Actinic Keratosis
+dermatologist,Basal Cell Carcinoma
+dermatologist,Cutaneous T-Cell Lymphoma
+dermatologist,Melanoma
+dermatologist,Squamous Cell Carcinoma
+dermatologist,Connective Tissue Disease
+dermatologist,Dermatomyositis
+dermatologist,Discoid Lupus Erythematosus
+dermatologist,Morphea
+dermatologist,Scleroderma
+dermatologist,Subacute Cutaneous Lupus
+dermatologist,Erythema Multiforme
+dermatologist,Erythema Nodsum
+dermatologist,Erythroderma
+dermatologist,Granuloma Annulare
+dermatologist,Hemangiomas
+dermatologist,Hyperhidrosis
+dermatologist,Keloids
+dermatologist,Keratosis Pilaris
+dermatologist,Lichen Sclerosis et Atrophicus
+dermatologist,Lichen Simplex Chronicus
+dermatologist,Photodamage
+dermatologist,Pityriasis Rosea
+dermatologist,Spider Veins
+dermatologist,Staphylococcal Scalded Skin
+dermatologist,Stevens Johnson Syndrome
+dermatologist,Toxic Epidermal Necrolysis
+dermatologist,Urticaria
+dermatologist,Vasculitis
 diabetologist,diabetes insipidus
 diabetologist,diabetes
 diabetologist,diabetes mellitus
@@ -51,6 +150,7 @@ endocrinologist,Hyperthyroidism
 endocrinologist,Hypopituitarism
 endocrinologist,Hypothyroidism
 endocrinologist,Metabolic Syndrome
+endocrinologist,pancreatitis
 endocrinologist,Pituitary disorder
 endocrinologist,Pituitary Tumors
 endocrinologist,Primary Aldosteronism
@@ -91,6 +191,7 @@ ent specialist,Tracheomalacia
 ent specialist,Transoral Laser Microsurgery (TLM)
 ent specialist,Transoral Robotic Surgery (TORS)
 ent specialist,Voice Disorders
+ent specialist,sinusitis
 gastroenterologist,Achalasia
 gastroenterologist,Acute Pancreatitis
 gastroenterologist,Alcoholic Liver Disease
@@ -105,17 +206,14 @@ gastroenterologist,Familial Adenomatous Polyposis
 gastroenterologist,Gallstone Disease
 gastroenterologist,Gastroesophageal Reflux Disease
 gastroenterologist,Gastroparesis
-gastroenterologist,GERD
 gastroenterologist,Hepatocellular Carcinoma
 gastroenterologist,Hereditary Colorectal Cancer
 gastroenterologist,Hereditary Nonpolyposis Colorectal Cancer
-gastroenterologist,IBL
 gastroenterologist,Irritable Bowel Syndrome
 gastroenterologist,Kids Familial Adenomatous Polyposis
 gastroenterologist,Liver Transplant Workup
 gastroenterologist,Peptic Ulcer Disease
 gastroenterologist,Portal Hypertension
-gastroenterologist,SOD
 gastroenterologist,Sphincter of Oddi Dysfunction
 gastroenterologist,Sporadic Colorectal Cancer
 gastroenterologist,Stomach (Gastric) Cancer
@@ -134,6 +232,7 @@ general physician,malaria
 general physician,leptospirosis
 general physician,amoebiasis
 general physician,cholera
+general physician,chicken pox
 general physician,hookworm infection
 general physician,brucellosis
 general physician,influenza
@@ -163,6 +262,7 @@ gynecologist,Irregular menstruation
 gynecologist,Laparoscopic oophorectomy
 gynecologist,Laparoscopic supracervical hysterectomy
 gynecologist,Laparoscopy
+gynecologist,late chums
 gynecologist,Lower genital tract dysplasia
 gynecologist,Menopause
 gynecologist,Miscarriage
@@ -186,9 +286,11 @@ gynecologist,Vaginal vault prolapse
 gynecologist,Vaginal yeast infections
 gynecologist,Vulvodynia
 gynecologist,Warts and premalignant lesions of the lower reproductive tract
+gynecologist,in vitri fertilisation
 nephrologist,Alports syndrome
 nephrologist,Chronic kidney disease
 nephrologist,Chronic renal failure
+nephrologist,renal failure
 nephrologist,Diabetic kidney disorder
 nephrologist,Diabetic nephropathy
 nephrologist,Electrolyte disorders
@@ -206,7 +308,6 @@ nephrologist,Proteinuria
 nephrologist,Pyelonephritis
 nephrologist,Renal cell carcinoma
 nephrologist,Renal insufficiency
-neurologist,ALS
 neurologist,Arteriovenous Malformation
 neurologist,brain abscesses
 neurologist,Brain Aneurysm
@@ -282,7 +383,6 @@ oncologist,Gallbladder Cancer
 oncologist,Gastrointestinal Stromal Tumor
 oncologist,Germ Cell Tumor
 oncologist,Gestational Trophoblastic Disease
-oncologist,GIST
 oncologist,Head and Neck Cancer
 oncologist,HIV/AIDS Related Cancer
 oncologist,Hodgkin
@@ -430,8 +530,8 @@ psychiatrist,Sleep Disorders
 psychiatrist,Somatic Symptom Disorder
 psychiatrist,Specific Learning Disorder
 psychiatrist,substance abuse
+psychiatrist,dementia
 pulmonologist,acute respiratory distress syndrome
-pulmonologist,ARDS
 pulmonologist,Asbestosis
 pulmonologist,Asthma
 pulmonologist,Bronchitis
@@ -439,13 +539,11 @@ pulmonologist,brown lung disease
 pulmonologist,Byssinosis
 pulmonologist,Chronic Cough
 pulmonologist,Chronic Obstructive Pulmonary Disease
-pulmonologist,COPD
 pulmonologist,Cystic Fibrosis
 pulmonologist,Emphysema
 pulmonologist,Farmer’s lung
 pulmonologist,Hemoptysis
 pulmonologist,Hypersensitivity pneumonitis
-pulmonologist,ILD
 pulmonologist,Interstitial Lung Disease
 pulmonologist,Interstitial lung disease
 pulmonologist,Lung Cancer
@@ -459,8 +557,8 @@ pulmonologist,Rheumatoid lung disease
 pulmonologist,Sarcoidosis
 pulmonologist,Silicosis
 pulmonologist,Solitary Pulmonary Nodule
-pulmonologist,TB
 pulmonologist,Tuberculosis
+pulmonologist,diastolic dysfunction
 sexologist,absent ejaculation
 sexologist,Bacterial Vaginosis
 sexologist,chancroid
@@ -486,9 +584,53 @@ sexologist,premature ejaculation
 sexologist,retrograde ejaculation
 sexologist,sexually transmitted diseases
 sexologist,std
-sexologist,syphillis
+sexologist,syphilis
 sexologist,Trichomoniasis
 sexologist,Unnatural sex
 sexologist,vaginismus
 sexologist,varicocele
 sexologist,chlamydia
+sexologist,hsv1 igg
+sexologist,phimosis
+urologist,kidney stone
+urologist,Prostatitis
+urologist,Interstitial cystitis
+urologist,Enlarged prostate
+urologist,Undescended testicles
+urologist,Hypospadias
+urologist,Bladder exstrophy
+urologist,Epispadias
+urologist,Azoospermia
+urologist,Bladder Control Problems
+urologist,Cystocele
+urologist,End-Stage Renal Disease
+urologist,Fecal Incontinence
+urologist,Hypospadias
+urologist,Kidney Transplant
+urologist,Hypogonadism
+urologist,Male Infertility
+urologist,Neurogenic Bladder
+urologist,Overactive bladder
+urologist,Pelvic Organ Prolapse
+urologist,Peyronie's Disease
+urologist,Post-Prostatectomy Incontinence
+urologist,Prostatitis
+urologist,Priapism
+urologist,Rectal Prolapse
+urologist,Recurrent Urinary Tract Infections
+urologist,Stress Urinary Incontinence
+urologist,Testicular Pain
+urologist,Testosterone Deficiency
+urologist,Upper Tract Tumor
+urologist,Ureteropelvic Junction Obstruction
+urologist,Urethral Cancer
+urologist,Urethral Diverticulum
+urologist,Urethral Stricture Disease
+urologist,Urinary Incontinence
+urologist,Urinary Tract Infection
+urologist,Microsurgical Varicocelectomy
+urologist,Varicocele
+urologist,Vasectomy Reversal
+urologist,Vesicoureteral Reflux
+urologist,Vesicovaginal Fistula
+urologist,Voiding Dysfunction
