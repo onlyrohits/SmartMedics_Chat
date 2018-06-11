@@ -32,14 +32,14 @@ The packages imported are as follows:
 	nltk version 3.3
 	pandas version 0.23.0
 	autocorrect version 0.3.0
-	goslate
+	textblob
 '''
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import pandas as pd
 from autocorrect import spell
-import goslate
+from textblob import TextBlob
 
 #################################################################
 
@@ -89,9 +89,11 @@ psych_list=[]
 short_disease_list=[]
 
 ########################################################
-gs=goslate.Goslate()
-lang=gs.detect(sentence)
-sentence=gs.translate(sentence,'en')
+text_input=TextBlob(sentence)
+lang=text_input.detect_language()
+if lang!='en':
+	sentence=text_input.translate(to='en')
+sentence=str(sentence)
 
 #############################################
 
@@ -190,7 +192,12 @@ specialist=""
 for elements in short_disease_list:
 	if elements[1] in word_tokenize(sentence):
 		specialist1=elements[0]
-		print('In our opinion you should consult a '+specialist1)
+		if lang=='en':
+			print('In our opinion you should consult a '+specialist1)
+		else:
+			output_text=TextBlob('In our opinion you should consult a '+specialist1)
+			output_text=output_text.translate(to=lang)
+			print(output_text)
 		break
 	else:
 		for element in disease_list:
@@ -200,7 +207,12 @@ for elements in short_disease_list:
 				specialist=element[0]
 				break
 		if flag==1:
-			print("You should consult a {} for {}".format(specialist,disease))
+			if lang=='en':
+				print("You should consult a" + specialist + "for"+ disease)
+			else:
+				output_text=TextBlob("You should consult a" + specialist + "for"+ disease)
+				output_text=output_text.translate(to=lang)
+				print(output_text)
 			break
 		elif flag==0:	
 			for m in primary:
@@ -218,48 +230,80 @@ for elements in short_disease_list:
 					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 						dominant_key='gynaecologist'
 						psych_present='psychiatrist'
-						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key+' and '+psych_present,lang)
-						print(output_text)
+						if lang=='en':
+							print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						else:
+							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+							output_text=output_text.translate(to=lang)
+							print(output_text)
 						break
 					else:
 						dominant_key='gynaecologist'
-						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
-						print(output_text)
+						if lang=='en':
+							print('There is a high probability that you should consult a '+dominant_key)
+						else:
+							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+							output_text=output_text.translate(to=lang)
+							print(output_text)
 						break
 				else:
 					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 						dominant_key='sexologist'
 						psych_present='psychiatrist'
-						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key+' and '+psych_present,lang)
-						print(output_text)
+						if lang=='en':
+							print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						else:
+							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+							output_text=output_text.translate(to=lang)
+							print(output_text)
 						break
 					elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
 						dominant_key='gynaecologist'
-						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
-						print(output_text)
+						if lang=='en':
+							print('There is a high probability that you should consult a '+dominant_key)
+						else:
+							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+							output_text=output_text.translate(to=lang)
+							print(output_text)
 						break
 					else:
 						dominant_key='sexologist'
-						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
-						print(output_text)
+						if lang=='en':
+							print('There is a high probability that you should consult a '+dominant_key)
+						else:
+							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+							output_text=output_text.translate(to=lang)
+							print(output_text)
 						break
 
 			elif min_key=='cancer':
 				dominant_key='oncologist'
-				output_text=gs.translate('There is a high probability that you should consult a '+ dominant_key,lang)
-				print(output_text)
+				if lang=='en':
+					print('There is a high probability that you should consult a '+ dominant_key)
+				else:
+					output_text=TextBlob('There is a high probability that you should consult a '+ dominant_key)
+					output_text=output_text.translate(to=lang)
+					print(output_text)
 				break
 			elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
 				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 					dominant_key='gynaecologist'
 					psych_present='psychiatrist'
-					output_text=gs.translate('There is a high probability that you should consult a '+dominant_key+' and '+psych_present,lang)
-					print(output_text)
+					if lang=='en':
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+					else:
+						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						output_text=output_text.translate(to=lang)
+						print(output_text)
 					break
 				else:
 					dominant_key='gynaecologist'
-					output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
-					print(output_text)
+					if lang=='en':
+						print('There is a high probability that you should consult a '+dominant_key)
+					else:
+						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+						output_text=output_text.translate(to=lang)
+						print(output_text)
 					break
 
 
@@ -285,12 +329,20 @@ for elements in short_disease_list:
 					if flag1 < 3:
 						print_list.append(item[0])
 				if print_list!=[]:
-					output_text=gs.translate('Based on the symptoms you should consult a '+' and '.join(print_list),lang)	
-					print(output_text)
+					if lang=='en':
+						print('Based on the symptoms you should consult a '+' and '.join(print_list))
+					else:
+						output_text=TextBlob('Based on the symptoms you should consult a '+' and '.join(print_list))
+						output_text=output_text.translate(to=lang)	
+						print(output_text)
 					break
 				if symptom_dict=={}:
 					for element in psych_list:
 						if sentence.find(element[1])>=0:
-							output_text=gs.translate('You should visit a psychiatrist',lang)
-							print(output_text)
+							if lang=='en':
+								print('You should visit a psychiatrist')
+							else:
+								output_text=TextBlob('You should visit a psychiatrist')
+								output_text=output_text.translate(to=lang)
+								print(output_text)
 							break
