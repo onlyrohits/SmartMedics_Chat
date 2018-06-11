@@ -25,17 +25,21 @@ The variables and their datatypes and structures are as follows:
 	value: 				INT or FLOAT variable storing total weight of a particular specialist based on the number of symptoms pertaining to that specialist. 
 	new_list: 			LIST containing the dictionary values as elements of the list in descending order of weights.
 	print_list: 		subLIST of the new_list containing only the first two elements.
+	lang:				The language of input statement
+	output_text:		The output of program	
 
 The packages imported are as follows:
 	nltk version 3.3
 	pandas version 0.23.0
 	autocorrect version 0.3.0
+	goslate
 '''
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import pandas as pd
 from autocorrect import spell
+import goslate
 
 #################################################################
 
@@ -49,7 +53,7 @@ def correction(sentence,List):
 	stop_words.remove('the')
 	stop_words.remove('to')
 	stop_words.remove('in')
-	stop_words.remove('of')
+	stop_words.remove('of')	
 	stop_words.remove('on')
 	stop_words.remove('for')
 	stop_words.remove('at')
@@ -83,6 +87,13 @@ keyword_list=[]
 disease_list=[]
 psych_list=[]
 short_disease_list=[]
+
+########################################################
+gs=goslate.Goslate()
+lang=gs.detect(sentence)
+sentence=gs.translate(sentence,'en')
+
+#############################################
 
 
 with open(filepath) as fp:  
@@ -207,40 +218,48 @@ for elements in short_disease_list:
 					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 						dominant_key='gynaecologist'
 						psych_present='psychiatrist'
-						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key+' and '+psych_present,lang)
+						print(output_text)
 						break
 					else:
 						dominant_key='gynaecologist'
-						print('There is a high probability that you should consult a '+dominant_key)
+						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
+						print(output_text)
 						break
 				else:
 					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 						dominant_key='sexologist'
 						psych_present='psychiatrist'
-						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key+' and '+psych_present,lang)
+						print(output_text)
 						break
 					elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
 						dominant_key='gynaecologist'
-						print('There is a high probability that you should consult a '+dominant_key)
+						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
+						print(output_text)
 						break
 					else:
 						dominant_key='sexologist'
-						print('There is a high probability that you should consult a '+dominant_key)
+						output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
+						print(output_text)
 						break
 
 			elif min_key=='cancer':
 				dominant_key='oncologist'
-				print('There is a high probability that you should consult a '+ dominant_key)
+				output_text=gs.translate('There is a high probability that you should consult a '+ dominant_key,lang)
+				print(output_text)
 				break
 			elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
 				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 					dominant_key='gynaecologist'
 					psych_present='psychiatrist'
-					print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+					output_text=gs.translate('There is a high probability that you should consult a '+dominant_key+' and '+psych_present,lang)
+					print(output_text)
 					break
 				else:
 					dominant_key='gynaecologist'
-					print('There is a high probability that you should consult a '+dominant_key)
+					output_text=gs.translate('There is a high probability that you should consult a '+dominant_key,lang)
+					print(output_text)
 					break
 
 
@@ -266,10 +285,12 @@ for elements in short_disease_list:
 					if flag1 < 3:
 						print_list.append(item[0])
 				if print_list!=[]:
-					print('Based on the symptoms you should consult a '+' and '.join(print_list))	
+					output_text=gs.translate('Based on the symptoms you should consult a '+' and '.join(print_list),lang)	
+					print(output_text)
 					break
 				if symptom_dict=={}:
 					for element in psych_list:
 						if sentence.find(element[1])>=0:
-							print('You should visit a psychiatrist')
+							output_text=gs.translate('You should visit a psychiatrist',lang)
+							print(output_text)
 							break
