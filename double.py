@@ -44,6 +44,7 @@ import tflearn
 import tensorflow as tf
 import numpy as np
 from nltk.stem.lancaster import LancasterStemmer
+from textblob import TextBlob
 
 #################################################################
 
@@ -113,6 +114,17 @@ keyword_list=[]
 disease_list=[]
 psych_list=[]
 short_disease_list=[]
+
+####################################################################################
+
+# To detect the input language and translate it to english if it's not in english
+text_input=TextBlob(sentence)
+lang=text_input.detect_language()
+if lang!='en':
+	sentence=text_input.translate(to='en')
+sentence=str(sentence)
+
+###################################################################################
 
 
 with open(filepath) as fp:  
@@ -219,7 +231,12 @@ for elements in short_disease_list:
                 specialist=element[0]
                 break
         if flag==1:
-            print("You should consult a {} for {}".format(specialist,disease))
+            if lang=='en':
+                print("You should consult a" + specialist + "for"+ disease)
+            else:
+                output_text=TextBlob("You should consult a" + specialist + "for"+ disease)
+                output_text=output_text.translate(to=lang)
+                print(output_text)
             break
         elif flag==0:
             for m in primary:
@@ -234,57 +251,112 @@ for elements in short_disease_list:
                     if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0:
                         dominant_key='gynaecologist'
                         psych_present='psychiatrist'
-                        print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        if lang=='en':
+                            print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        else:
+                            output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                            output_text=output_text.translate(to=lang)
+                            print(output_text)
                         break
                     else:
                         dominant_key='gynaecologist'
-                        print('There is a high probability that you should consult a '+dominant_key)
+                        if lang=='en':
+                            print('There is a high probability that you should consult a '+dominant_key)
+                        else:
+                            output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+                            output_text=output_text.translate(to=lang)
+                            print(output_text)
                         break
                 else:
                     if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
                         dominant_key='sexologist'
                         psych_present='psychiatrist'
-                        print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-                        break
+                        if lang=='en':
+                            print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        else:
+                            output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                            output_text=output_text.translate(to=lang)
+                            print(output_text)
+                            break
                     elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
                         dominant_key='gynaecologist'
-                        print('There is a high probability that you should consult a '+dominant_key)
-                        break
+                        if lang=='en':
+                            print('There is a high probability that you should consult a '+dominant_key)
+                        else:
+                            output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+                            output_text=output_text.translate(to=lang)
+                            print(output_text)
+                            break
                     else:
                         dominant_key='sexologist'
-                        print('There is a high probability that you should consult a '+dominant_key)
+                        if lang=='en':
+                            print('There is a high probability that you should consult a '+dominant_key)
+                        else:
+                            output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+                            output_text=output_text.translate(to=lang)
+                            print(output_text)
                         break
             elif min_key=='penis':
                 if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
                     dominant_key='sexologist'
                     psych_present='psychiatrist'
-                    print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    if lang=='en':
+                        print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    else:
+                        output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        output_text=output_text.translate(to=lang)
+                        print(output_text)							
                     break
             elif min_key=='testicles':
                 if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
                     dominant_key='sexologist'
                     psych_present='psychiatrist'
-                    print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    if lang=='en':
+                        print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    else :
+                        output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        output_text=output_text.translate(to=lang)
+                        print(output_text)
                     break
             elif min_key=='testes':
                 if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
                     dominant_key='sexologist'
                     psych_present='psychiatrist'
-                    print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    if lang=='en':
+                        print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    else:
+                        output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        output_text=output_text.translate(to=lang)
+                        print(output_text)						
                     break
             elif min_key=='cancer':
                 dominant_key='oncologist'
-                print('There is a high probability that you should consult a '+ dominant_key)
+                if lang=='en':
+                    print('There is a high probability that you should consult a '+ dominant_key)
+                else:
+                    output_text=TextBlob('There is a high probability that you should consult a '+ dominant_key)
+                    output_text=output_text.translate(to=lang)
+                    print(output_text)
                 break
             elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
                 if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
                     dominant_key='gynaecologist'
                     psych_present='psychiatrist'
-                    print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    if lang=='en':
+                        print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                    else:
+                        output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+                        output_text=output_text.translate(to=lang)
+                        print(output_text)
                     break
                 else:
                     dominant_key='gynaecologist'
-                    print('There is a high probability that you should consult a '+dominant_key)
+                    if lang=='en':
+                        print('There is a high probability that you should consult a '+dominant_key)
+                    else:
+                        output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
+                        output_text=output_text.translate(to=lang)
+                        print(output_text)
                     break
             else:
                 # a table structure to hold the different punctuation used
@@ -364,5 +436,10 @@ for elements in short_disease_list:
 
                 
                 result=str(categories[np.argmax(model.predict([get_tf_record(sentence)]))])
-                print("Based on our ML prediction, you should consult a "+result)
+                if lang=='en':
+                    print("Based on our prediction, you should consult a "+result)
+                else:
+                    output_text=TextBlob("Based on our analysis, you should consult a "+result)
+                    output_text=output_text.translate(to=lang)
+                    print(output_text)
                 break
