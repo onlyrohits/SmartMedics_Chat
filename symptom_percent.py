@@ -25,21 +25,17 @@ The variables and their datatypes and structures are as follows:
 	value: 				INT or FLOAT variable storing total weight of a particular specialist based on the number of symptoms pertaining to that specialist. 
 	new_list: 			LIST containing the dictionary values as elements of the list in descending order of weights.
 	print_list: 		subLIST of the new_list containing only the first two elements.
-	lang:				The language of input statement
-	output_text:		The output of program	
 
 The packages imported are as follows:
 	nltk version 3.3
 	pandas version 0.23.0
 	autocorrect version 0.3.0
-	textblob
 '''
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import pandas as pd
 from autocorrect import spell
-from textblob import TextBlob
 
 #################################################################
 
@@ -53,7 +49,7 @@ def correction(sentence,List):
 	stop_words.remove('the')
 	stop_words.remove('to')
 	stop_words.remove('in')
-	stop_words.remove('of')	
+	stop_words.remove('of')
 	stop_words.remove('on')
 	stop_words.remove('for')
 	stop_words.remove('at')
@@ -87,15 +83,6 @@ keyword_list=[]
 disease_list=[]
 psych_list=[]
 short_disease_list=[]
-
-########################################################
-text_input=TextBlob(sentence)
-lang=text_input.detect_language()
-if lang!='en':
-	sentence=text_input.translate(to='en')
-sentence=str(sentence)
-
-#############################################
 
 
 with open(filepath) as fp:  
@@ -184,7 +171,7 @@ for sex in word_tokenize(sentence):
 symptom_dict={}
 dominant_key=''
 psych_present=''
-primary=['sex', 'cancer','abortion']
+primary=['sex', 'cancer','abortion','penis','testes','testicles']
 primary_indices={}
 flag=0
 disease=""
@@ -192,12 +179,7 @@ specialist=""
 for elements in short_disease_list:
 	if elements[1] in word_tokenize(sentence):
 		specialist1=elements[0]
-		if lang=='en':
-			print('In our opinion you should consult a '+specialist1)
-		else:
-			output_text=TextBlob('In our opinion you should consult a '+specialist1)
-			output_text=output_text.translate(to=lang)
-			print(output_text)
+		print('In our opinion you should consult a '+specialist1)
 		break
 	else:
 		for element in disease_list:
@@ -207,12 +189,7 @@ for elements in short_disease_list:
 				specialist=element[0]
 				break
 		if flag==1:
-			if lang=='en':
-				print("You should consult a" + specialist + "for"+ disease)
-			else:
-				output_text=TextBlob("You should consult a" + specialist + "for"+ disease)
-				output_text=output_text.translate(to=lang)
-				print(output_text)
+			print("You should consult a {} for {}".format(specialist,disease))
 			break
 		elif flag==0:	
 			for m in primary:
@@ -230,80 +207,61 @@ for elements in short_disease_list:
 					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 						dominant_key='gynaecologist'
 						psych_present='psychiatrist'
-						if lang=='en':
-							print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						else:
-							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-							output_text=output_text.translate(to=lang)
-							print(output_text)
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
 						break
 					else:
 						dominant_key='gynaecologist'
-						if lang=='en':
-							print('There is a high probability that you should consult a '+dominant_key)
-						else:
-							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-							output_text=output_text.translate(to=lang)
-							print(output_text)
+						print('There is a high probability that you should consult a '+dominant_key)
 						break
 				else:
 					if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 						dominant_key='sexologist'
 						psych_present='psychiatrist'
-						if lang=='en':
-							print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						else:
-							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-							output_text=output_text.translate(to=lang)
-							print(output_text)
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
 						break
 					elif sentence.find('period')>=0 or sentence.find('abortion')>=0:
 						dominant_key='gynaecologist'
-						if lang=='en':
-							print('There is a high probability that you should consult a '+dominant_key)
-						else:
-							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-							output_text=output_text.translate(to=lang)
-							print(output_text)
+						print('There is a high probability that you should consult a '+dominant_key)
 						break
 					else:
 						dominant_key='sexologist'
-						if lang=='en':
-							print('There is a high probability that you should consult a '+dominant_key)
-						else:
-							output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-							output_text=output_text.translate(to=lang)
-							print(output_text)
+						print('There is a high probability that you should consult a '+dominant_key)
+						break
+
+			elif min_key=='penis':
+				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+						dominant_key='sexologist'
+						psych_present='psychiatrist'
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						break
+
+			elif min_key=='testicles':
+				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+						dominant_key='sexologist'
+						psych_present='psychiatrist'
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
+						break
+
+			elif min_key=='testes':
+				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
+						dominant_key='sexologist'
+						psych_present='psychiatrist'
+						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
 						break
 
 			elif min_key=='cancer':
 				dominant_key='oncologist'
-				if lang=='en':
-					print('There is a high probability that you should consult a '+ dominant_key)
-				else:
-					output_text=TextBlob('There is a high probability that you should consult a '+ dominant_key)
-					output_text=output_text.translate(to=lang)
-					print(output_text)
+				print('There is a high probability that you should consult a '+ dominant_key)
 				break
 			elif sentence.find('abortion')>=0 or sentence.find('period')>=0 :
 				if sentence.find('hypertension')>=0 or sentence.find('anxiety')>=0 or sentence.find('stress')>=0 or sentence.find('depression')>=0 :
 					dominant_key='gynaecologist'
 					psych_present='psychiatrist'
-					if lang=='en':
-						print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
-						output_text=output_text.translate(to=lang)
-						print(output_text)
+					print('There is a high probability that you should consult a '+dominant_key+' and '+psych_present)
 					break
 				else:
 					dominant_key='gynaecologist'
-					if lang=='en':
-						print('There is a high probability that you should consult a '+dominant_key)
-					else:
-						output_text=TextBlob('There is a high probability that you should consult a '+dominant_key)
-						output_text=output_text.translate(to=lang)
-						print(output_text)
+					print('There is a high probability that you should consult a '+dominant_key)
 					break
 
 
@@ -329,20 +287,10 @@ for elements in short_disease_list:
 					if flag1 < 3:
 						print_list.append(item[0])
 				if print_list!=[]:
-					if lang=='en':
-						print('Based on the symptoms you should consult a '+' and '.join(print_list))
-					else:
-						output_text=TextBlob('Based on the symptoms you should consult a '+' and '.join(print_list))
-						output_text=output_text.translate(to=lang)	
-						print(output_text)
+					print('Based on the symptoms you should consult a '+' and '.join(print_list))	
 					break
 				if symptom_dict=={}:
 					for element in psych_list:
 						if sentence.find(element[1])>=0:
-							if lang=='en':
-								print('You should visit a psychiatrist')
-							else:
-								output_text=TextBlob('You should visit a psychiatrist')
-								output_text=output_text.translate(to=lang)
-								print(output_text)
+							print('You should visit a psychiatrist')
 							break
